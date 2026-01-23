@@ -18,14 +18,20 @@
 <body>
     <header class="header">
         <div class="header-inner">
-            <h1 class="logo">Mallow</h1>
+            <a href="#" class="logo-link">
+                <h1 class="logo">Mallow</h1>
+            </a>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
             <nav class="nav">
                 <ul>
-                    <li><a href="#about">Philosophy</a></li>
-                    <li><a href="#service">Menu</a></li>
-                    <li><a href="#flow">Flow</a></li>
-                    <li><a href="#gallery">Gallery</a></li>
-                    <li><a href="#contact" class="btn-nav">Contact</a></li>
+                    <li><a href="#">Top</a></li>
+                    <li><a href="#service">Service</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Access</a></li>
                 </ul>
             </nav>
         </div>
@@ -39,7 +45,7 @@
                 <img src="assets/images/hero_main_visual.png" alt="Mallow Hero Visual" class="hero-img">
             </div>
             <div class="hero-content">
-                <h2 class="hero-title">本来のあなたを、<br>輝きへ導く。<br>一生モノの<br>『似合う』を<br>見つける場所。</h2>
+                <h2 class="hero-title">鏡を見るのが、<br>もっと好きになる。<br>明日の私へ、<br>『似合う』の贈り物を。</h2>
                 <p class="hero-subtitle">パーソナルカラー診断・骨格診断・顔タイプ診断を通して、<br>あなたの美しさを言語化します。</p>
             </div>
         </section>
@@ -54,8 +60,7 @@
                             <img src="assets/images/service_diagnosis.png" alt="Personal Color Diagnosis">
                         </div>
                         <h3>Personal Color</h3>
-                        <p class="service-desc">
-                            生まれ持った肌・瞳・髪の色から、あなたを最も美しく魅せる「似合う色」を導き出します。メイクやファッション選びに迷いがなくなり、本来の透明感を引き出します。</p>
+                        <p class="service-desc">肌の透明感を呼び覚ます、あなたを一番美しく見せる『色』の魔法。</p>
                     </div>
                     <div class="service-card">
                         <div class="service-img-wrapper">
@@ -64,8 +69,7 @@
                                 style="filter: hue-rotate(30deg);">
                         </div>
                         <h3>Skeletal Diagnosis</h3>
-                        <p class="service-desc">
-                            生まれ持った体の質感やラインの特徴から、スタイルアップする服の形や素材をご提案します。着痩せ効果だけでなく、洗練された印象を与える着こなしが叶います。</p>
+                        <p class="service-desc">『着痩せ』も『脚長』も思いのまま。体型を最大限に活かす服の選び方。</p>
                     </div>
                     <div class="service-card">
                         <div class="service-img-wrapper">
@@ -74,8 +78,7 @@
                                 style="filter: hue-rotate(-30deg);">
                         </div>
                         <h3>Face Type Diagnosis</h3>
-                        <p class="service-desc">
-                            お顔の輪郭やパーツの配置から、あなたに似合うファッションのテイストを分析。魅力を最大限に活かすアクセサリーや髪型、ブランドの選び方まで詳しくアドバイスします。</p>
+                        <p class="service-desc">魅力が引き立つ『テイスト』を知る。誰とも被らない、あなたらしい個性を。</p>
                     </div>
                 </div>
             </div>
@@ -86,15 +89,18 @@
             <div class="container about-container">
                 <div class="about-content">
                     <h2 class="section-title">Philosophy</h2>
-                    <h3 class="about-lead">「似合う」を知ることは、<br>自分を愛すること。</h3>
+                    <h3 class="about-lead">私らしい美しさの、その先へ。</h3>
                     <p class="about-text">
-                        鏡に映る自分を見て、心が弾む瞬間をご存知ですか？<br>
-                        本来の魅力を引き出す「色」や「形」を身につけるだけで、<br>
-                        表情まで生き生きと輝き始めます。<br><br>
-                        Mallowでは、マニュアル通りの診断結果をお伝えするだけでなく、<br>
-                        あなたのライフスタイルや「なりたい姿」に寄り添った<br>
-                        パーソナルなアドバイスを大切にしています。<br><br>
-                        一生モノの診断で、毎日の自分選びをもっと楽しく、もっと自由に。
+                        クローゼットの前で『着る服がない』と立ち止まってしまう。<br>
+                        流行の服を買ったはずなのに、なぜか鏡の中の自分に違和感がある。<br>
+                        そんな経験はありませんか？<br><br>
+                        Mallow（マロウ）は、ただ『似合う』を診断するだけの場所ではありません。<br>
+                        色、骨格、そして顔のタイプ。<br>
+                        理論に裏打ちされた『あなただけの正解』を知ることは、<br>
+                        自分の魅力を再発見し、自分をもっと大切にするための贈り物です。<br><br>
+                        『鏡を見るのが、もっと好きになる』<br>
+                        その瞬間の輝きをご一緒できることを、心より楽しみにしています。<br>
+                        あなたが、あなた自身のファンになれるように。
                     </p>
                 </div>
                 <!-- Optional: Add owner image or interior shot adjacent -->
@@ -149,12 +155,10 @@
                 <!-- Placeholder for gallery layout -->
                 <div class="gallery-grid">
                     <div class="gallery-item">
-                        <div class="gallery-placeholder">Before</div>
-                        <div class="gallery-placeholder">After</div>
+                        <img src="assets/images/before_after_color.png" alt="Personal Color Transformation">
                     </div>
                     <div class="gallery-item">
-                        <div class="gallery-placeholder">Before</div>
-                        <div class="gallery-placeholder">After</div>
+                        <img src="assets/images/before_after_skeletal.png" alt="Skeletal Diagnosis Transformation">
                     </div>
                 </div>
                 <p class="note">※画像はイメージです</p>
@@ -166,14 +170,16 @@
             <div class="contact-inner">
                 <h2 class="section-title">Contact</h2>
                 <p>ご予約・お問い合わせは公式LINEより承っております。<br>お気軽にご相談ください。</p>
-                <a href="#" class="btn-primary">公式LINEで予約・相談</a>
+                <a href="https://line.me/R/ti/p/@example" class="btn-primary" target="_blank"
+                    rel="noopener noreferrer">公式LINEで予約・相談</a>
             </div>
         </section>
     </main>
 
     <!-- Floating Button -->
     <div class="floating-btn-container">
-        <a href="#" class="floating-btn">自分史上最高の自分に会いにいく</a>
+        <a href="https://line.me/R/ti/p/@example" class="floating-btn" target="_blank"
+            rel="noopener noreferrer">自分史上最高の自分に会いにいく</a>
     </div>
 
     <footer class="footer">
@@ -182,6 +188,7 @@
             <p class="copyright">&copy; 2026 Mallow Personal Color & Skeletal Diagnosis Salon.</p>
         </div>
     </footer>
+    <script src="scripts/main.js"></script>
 </body>
 
 </html>
