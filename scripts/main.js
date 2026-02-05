@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const footer = document.querySelector('.footer');
 
     if (floatingBtnContainer && footer) {
-        const observer = new IntersectionObserver((entries) => {
+        const footerObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     floatingBtnContainer.classList.add('hidden');
@@ -30,10 +30,40 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
         }, {
-            root: null, // viewport
-            threshold: 0.1 // Trigger when 10% of footer is visible
+            root: null,
+            threshold: 0.1
         });
 
-        observer.observe(footer);
+        footerObserver.observe(footer);
     }
+
+    // Fade-in Animation with IntersectionObserver
+    const fadeInElements = document.querySelectorAll('.fade-in');
+
+    if (fadeInElements.length > 0) {
+        const fadeInObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                }
+            });
+        }, {
+            root: null,
+            threshold: 0.1
+        });
+
+        fadeInElements.forEach(el => fadeInObserver.observe(el));
+    }
+
+    // Header scroll effect
+    const header = document.querySelector('.header');
+    const scrollThreshold = 100;
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > scrollThreshold) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
 });
