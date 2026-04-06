@@ -155,6 +155,27 @@ img {
     border-radius: 50px;
 }
 
+/* ===== Hero Animation ===== */
+@keyframes heroFadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes heroZoom {
+    from {
+        transform: scale(1.06);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
 /* ===== Hero Section ===== */
 .hero {
     position: relative;
@@ -181,6 +202,7 @@ img {
     object-fit: cover;
     border-radius: 0;
     opacity: 0.9;
+    animation: heroZoom 1.8s ease forwards;
 }
 
 .hero-content {
@@ -198,11 +220,13 @@ img {
     color: var(--text-primary);
     letter-spacing: 0.15em;
     line-height: 1.6;
+    animation: heroFadeUp 1s ease 0.4s both;
 }
 
 .hero-subtitle {
     font-size: 1rem;
     color: var(--text-secondary);
+    animation: heroFadeUp 1s ease 0.9s both;
 }
 
 /* ===== Service Section ===== */
@@ -614,12 +638,45 @@ img {
 
 .contact .section-title {
     color: var(--white);
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
 }
 
-.contact p {
-    margin-bottom: 40px;
+.contact-grid {
+    display: flex;
+    align-items: flex-start;
+    gap: 0;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.contact-line-wrap,
+.contact-form-wrap {
+    flex: 1;
+    padding: 0 40px;
+}
+
+.contact-sub-title {
     font-size: 1.1rem;
+    color: var(--white);
+    margin-bottom: 15px;
+    letter-spacing: 0.1em;
+}
+
+.contact-line-wrap p,
+.contact-form-wrap p {
+    font-size: 0.9rem;
+    margin-bottom: 30px;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.8;
+}
+
+.contact-divider {
+    width: 1px;
+    background: rgba(255, 255, 255, 0.3);
+    align-self: stretch;
+    margin: 0;
+    flex-shrink: 0;
 }
 
 .btn-primary {
@@ -636,6 +693,64 @@ img {
 }
 
 .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 18px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.15);
+    color: var(--white);
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+    outline: none;
+    transition: border-color 0.3s, background 0.3s;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.22);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 110px;
+}
+
+.btn-submit {
+    align-self: flex-start;
+    background: var(--white);
+    color: var(--main-color);
+    border: none;
+    padding: 12px 35px;
+    border-radius: 50px;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn-submit:hover {
     transform: translateY(-2px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
@@ -697,8 +812,30 @@ img {
 .footer-logo {
     font-family: var(--font-heading);
     font-size: 1.5rem;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     color: var(--main-color);
+}
+
+.footer-sns {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 20px;
+}
+
+.footer-sns a {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: var(--main-color);
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.footer-sns a:hover {
+    opacity: 0.7;
+    transform: translateY(-2px);
 }
 
 /* ===== Floating Reservation Button ===== */
@@ -834,6 +971,23 @@ img {
     /* Testimonials mobile */
     .testimonials-grid {
         grid-template-columns: 1fr;
+    }
+
+    /* Contact mobile */
+    .contact-grid {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .contact-line-wrap,
+    .contact-form-wrap {
+        padding: 0 10px;
+    }
+
+    .contact-divider {
+        width: 100%;
+        height: 1px;
+        align-self: auto;
     }
 
     /* Access mobile */
